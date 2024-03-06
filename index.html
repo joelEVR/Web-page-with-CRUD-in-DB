@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Ensure proper rendering and touch zooming on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuneHub | Assignment 2</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <h2 class="logo">TuneHub</h2>
+        <nav class="navigation">
+            <a href="#About">About</a>
+            <a href="#Contact">Contact</a>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="Home" id="Home">
+        <div class="content">
+            <span class="hi">hi there...</span>
+            <h3>Welcome to <span>TuneHub</span></h3>
+            <p class="text">Dive into a world where melodies dance and rhythms come alive.</p>
+        </div>
+    </section>
+
+    <!-- About Popup -->
+    <div class="about-popup">
+        <span class="icon-close-about">
+            <ion-icon name="close"></ion-icon>
+        </span>
+        <div class="about-content">
+            <h2>About us</h2>
+            <p class="text">At TuneHub, music isn't just a sound; it's an experience, a journey, and a celebration of
+                the universal language that connects us all. We are a passionate team of music enthusiasts on a mission
+                to create a virtual space that goes beyond the ordinary. Here, we believe that music has the power to
+                inspire, uplift, and unite.</p>
+        </div>
+    </div>
+
+    <!-- Contact Popup -->
+    <div class="contact-popup">
+        <span class="icon-close-contact">
+            <ion-icon name="close"></ion-icon>
+        </span>
+        <div class="contact-content">
+            <h2>Contact</h2>
+            <h3>Our email</h3>
+            <p>TuneHub@gmail.com</p>
+            <h3>Our phone number</h3>
+            <p>+123-456-789</p>
+        </div>
+    </div>
+
+    <!-- Error Message Placeholder -->
+    <div class="error-message" id="error-message" style="display: none;">
+        <p>Error message placeholder</p>
+    </div>
+
+    <!-- Login and Registration Box -->
+    <div class="wrapper">
+        <span class="icon-close">
+            <ion-icon name="close"></ion-icon>
+        </span>
+
+        <!-- Login Form -->
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="php/user_info.php" method="POST">
+                <input type="hidden" name="action" value="login">
+                <!-- Email Input -->
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <label>Email</label>
+                </div>
+                <!-- Password Input -->
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <label>Password</label>
+                </div>
+                <!-- Remember Me and Forgot Password -->
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <!-- Submit Button -->
+                <button type="submit" class="btn">Login</button>
+                <!-- Link to Register -->
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                </div>
+                <div class="error-message"></div>
+            </form>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="php/user_info.php" method="POST">
+                <input type="hidden" name="action" value="register">
+                <!-- Email Input for Registration -->
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <label>Email</label>
+                </div>
+                <!-- Password Input for Registration -->
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <label>Password</label>
+                </div>
+                <!-- Terms and Conditions Checkbox -->
+                <div class="remember-forgot">
+                    <label><input type="checkbox" name="terms"> I agree to the terms & conditions</label>
+                </div>
+                <!-- Submit Button for Registration -->
+                <button type="submit" class="btn">Register</button>
+                <!-- Link to Login -->
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+                <div class="error-message"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2023 David Contreras, Joel Velasquez, Sukaina Al-akwaa | Date: Nov 26, 2023</p>
+    </footer>
+
+    <!-- External JavaScript file -->
+    <script src="js/script.js"></script>
+
+    <!-- Icon references for UI enhancement -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
